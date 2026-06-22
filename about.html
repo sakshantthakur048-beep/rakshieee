@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — The Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== MASTHEAD ===================== -->
+  <header class="masthead">
+    <div class="masthead__top">
+      <span class="masthead__date" id="todayDate">—</span>
+      <div class="masthead__topright">
+        <label for="currencySelect" class="currency-label">Currency</label>
+        <select id="currencySelect" class="currency-select">
+          <option value="USD">$ USD</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+          <option value="INR">₹ INR</option>
+          <option value="CAD">$ CAD</option>
+          <option value="AUD">$ AUD</option>
+          <option value="JPY">¥ JPY</option>
+        </select>
+      </div>
+    </div>
+    <div class="masthead__main">
+      <a href="index.html" class="masthead__titlelink"><h1 class="masthead__title">THE LEDGER</h1></a>
+      <p class="masthead__subtitle">A public record of who stayed, who left, and what it cost them</p>
+    </div>
+    <nav class="masthead__nav">
+      <a href="index.html">Home</a>
+      <span class="dot">·</span>
+      <a href="calculator.html">Calculator</a>
+      <span class="dot">·</span>
+      <a href="stories.html">Stories</a>
+      <span class="dot">·</span>
+      <a href="about.html" class="is-active">About Us</a>
+      <span class="dot">·</span>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ===================== ABOUT US ===================== -->
+  <section class="about">
+    <div class="section-head">
+      <span class="section-head__no">Exhibit D</span>
+      <h3 class="section-head__title">About The Ledger</h3>
+    </div>
+    <div class="about__body">
+      <p class="about__lead">Most career advice is either a motivational poster or a spreadsheet. We wanted neither.</p>
+      <p>The Ledger started as a question asked in group chats and exit interviews: was it actually worth it? Not the version people tell at parties — the real arithmetic of salary, commute, growth, and the quiet cost of starting over.</p>
+      <p>We built a calculator that does the math honestly, including the part people forget — unvested 401(k) money left behind. And we built a place to read what real people decided, in their own words, filed next to the numbers that shaped the decision.</p>
+      <p>No company names. No recruiters in the comments. Just the record.</p>
+      <p>Have a story to add, or numbers that don't match what we assumed? <a href="contact.html">Tell us</a>.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__masthead">THE LEDGER</p>
+    <p class="footer__line">Printed for the undecided, by the once-undecided.</p>
+    <p class="footer__meta">No data sold. No names required. Entries are anonymized estimates, not financial advice.</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="stories.html">Stories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

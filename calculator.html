@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Calculator — The Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== MASTHEAD ===================== -->
+  <header class="masthead">
+    <div class="masthead__top">
+      <span class="masthead__date" id="todayDate">—</span>
+      <div class="masthead__topright">
+        <label for="currencySelect" class="currency-label">Currency</label>
+        <select id="currencySelect" class="currency-select">
+          <option value="USD">$ USD</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+          <option value="INR">₹ INR</option>
+          <option value="CAD">$ CAD</option>
+          <option value="AUD">$ AUD</option>
+          <option value="JPY">¥ JPY</option>
+        </select>
+      </div>
+    </div>
+    <div class="masthead__main">
+      <a href="index.html" class="masthead__titlelink"><h1 class="masthead__title">THE LEDGER</h1></a>
+      <p class="masthead__subtitle">A public record of who stayed, who left, and what it cost them</p>
+    </div>
+    <nav class="masthead__nav">
+      <a href="index.html">Home</a>
+      <span class="dot">·</span>
+      <a href="calculator.html" class="is-active">Calculator</a>
+      <span class="dot">·</span>
+      <a href="stories.html">Stories</a>
+      <span class="dot">·</span>
+      <a href="about.html">About Us</a>
+      <span class="dot">·</span>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ===================== PAGE INTRO ===================== -->
+  <section class="page-intro">
+    <p class="page-intro__eyebrow">Exhibit A</p>
+    <h2 class="page-intro__title">The Calculator</h2>
+    <p class="page-intro__desc">Enter both figures. The verdict is stamped automatically — including what unvested 401(k) money you'd give up by leaving today.</p>
+  </section>
+
+  <!-- ===================== CALCULATOR ===================== -->
+  <section class="ledger">
+    <div class="ledger__sheet">
+      <div class="ledger__row ledger__row--input">
+        <div class="ledger__field">
+          <label for="currentSalary">Current salary <span class="unit">/ year</span></label>
+          <div class="field__inputwrap">
+            <span class="field__prefix" id="prefixCurrent">$</span>
+            <input type="number" id="currentSalary" placeholder="65,000" min="0" step="500">
+          </div>
+        </div>
+        <div class="ledger__field">
+          <label for="offerSalary">New offer <span class="unit">/ year</span></label>
+          <div class="field__inputwrap">
+            <span class="field__prefix" id="prefixOffer">$</span>
+            <input type="number" id="offerSalary" placeholder="78,000" min="0" step="500">
+          </div>
+        </div>
+      </div>
+
+      <div class="ledger__row ledger__row--extra">
+        <div class="ledger__field ledger__field--small">
+          <label for="yearsAtJob">Years at current job</label>
+          <input type="number" id="yearsAtJob" placeholder="3" min="0" step="0.5">
+        </div>
+        <div class="ledger__field ledger__field--small">
+          <label for="commuteChange">Commute change</label>
+          <select id="commuteChange">
+            <option value="0">No change</option>
+            <option value="shorter">Shorter</option>
+            <option value="longer">Longer</option>
+          </select>
+        </div>
+        <div class="ledger__field ledger__field--small">
+          <label for="growthOutlook">Growth at current job</label>
+          <select id="growthOutlook">
+            <option value="stalled">Stalled</option>
+            <option value="steady">Steady</option>
+            <option value="strong">Strong</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ledger__row ledger__row--401k">
+        <p class="ledger__subhead">401(k) at current job</p>
+      </div>
+      <div class="ledger__row ledger__row--extra">
+        <div class="ledger__field ledger__field--small">
+          <label for="vestedBalance">Employer match balance</label>
+          <div class="field__inputwrap field__inputwrap--small">
+            <span class="field__prefix field__prefix--small" id="prefixVested">$</span>
+            <input type="number" id="vestedBalance" placeholder="8,000" min="0" step="100">
+          </div>
+        </div>
+        <div class="ledger__field ledger__field--small">
+          <label for="vestingSchedule">Vesting schedule</label>
+          <select id="vestingSchedule">
+            <option value="0">Fully vested already</option>
+            <option value="1">1-year cliff</option>
+            <option value="2">2-year graded</option>
+            <option value="3">3-year graded</option>
+            <option value="4">4-year graded</option>
+            <option value="5">5-year graded</option>
+          </select>
+        </div>
+        <div class="ledger__field ledger__field--small">
+          <label for="vestedPercent">Currently vested</label>
+          <select id="vestedPercent">
+            <option value="0">0%</option>
+            <option value="20">20%</option>
+            <option value="40">40%</option>
+            <option value="60">60%</option>
+            <option value="80">80%</option>
+            <option value="100">100%</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="ledger__submit" id="calcBtn">Calculate the verdict</button>
+
+      <div class="ledger__results" id="resultsBox" hidden>
+        <div class="results__figures">
+          <div class="figure">
+            <span class="figure__label">Raw difference</span>
+            <span class="figure__value" id="rawDiff">—</span>
+          </div>
+          <div class="figure">
+            <span class="figure__label">Percent change</span>
+            <span class="figure__value" id="pctDiff">—</span>
+          </div>
+          <div class="figure">
+            <span class="figure__label">5-year projection</span>
+            <span class="figure__value" id="fiveYear">—</span>
+          </div>
+        </div>
+
+        <div class="figure figure--wide" id="vestingNote" hidden>
+          <span class="figure__label">401(k) left on the table if you leave today</span>
+          <span class="figure__value" id="vestingLoss">—</span>
+        </div>
+
+        <div class="chart-block">
+          <p class="chart-block__label">Visual comparison</p>
+          <div class="chart-block__canvaswrap">
+            <canvas id="salaryChart" role="img" aria-label="Line chart comparing cumulative earnings if staying versus leaving, over five years, accounting for unvested 401k impact"></canvas>
+          </div>
+        </div>
+
+        <div class="stamp-wrap">
+          <div class="stamp" id="verdictStamp">
+            <span id="verdictText">STAY</span>
+          </div>
+          <p class="stamp__reasoning" id="verdictReasoning">—</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__masthead">THE LEDGER</p>
+    <p class="footer__line">Printed for the undecided, by the once-undecided.</p>
+    <p class="footer__meta">No data sold. No names required. Entries are anonymized estimates, not financial advice.</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="stories.html">Stories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

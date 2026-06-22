@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ledger — Stay or Leave</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== MASTHEAD ===================== -->
+  <header class="masthead">
+    <div class="masthead__top">
+      <span class="masthead__date" id="todayDate">—</span>
+      <div class="masthead__topright">
+        <label for="currencySelect" class="currency-label">Currency</label>
+        <select id="currencySelect" class="currency-select">
+          <option value="USD">$ USD</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+          <option value="INR">₹ INR</option>
+          <option value="CAD">$ CAD</option>
+          <option value="AUD">$ AUD</option>
+          <option value="JPY">¥ JPY</option>
+        </select>
+      </div>
+    </div>
+    <div class="masthead__main">
+      <a href="index.html" class="masthead__titlelink"><h1 class="masthead__title">THE LEDGER</h1></a>
+      <p class="masthead__subtitle">A public record of who stayed, who left, and what it cost them</p>
+    </div>
+    <nav class="masthead__nav">
+      <a href="index.html" class="is-active">Home</a>
+      <span class="dot">·</span>
+      <a href="calculator.html">Calculator</a>
+      <span class="dot">·</span>
+      <a href="stories.html">Stories</a>
+      <span class="dot">·</span>
+      <a href="about.html">About Us</a>
+      <span class="dot">·</span>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <p class="hero__eyebrow">An open question, asked daily</p>
+    <h2 class="hero__headline">
+      Everyone weighs<br>
+      the same two words:<br>
+      <span class="hero__emphasis">stay</span> or <span class="hero__emphasis">leave</span>.
+    </h2>
+    <p class="hero__deck">
+      Run the numbers, read what others decided, and add your own
+      entry to the record.
+    </p>
+    <div class="hero__actions">
+      <a href="calculator.html" class="hero__btn hero__btn--primary">Run the calculator</a>
+      <a href="stories.html" class="hero__btn">Read the stories</a>
+    </div>
+  </section>
+
+  <!-- ===================== HOME PREVIEW CARDS ===================== -->
+  <section class="home-grid reveal-stagger" id="homeGrid">
+    <a href="calculator.html" class="home-card">
+      <span class="home-card__no">Exhibit A</span>
+      <h3 class="home-card__title">The Calculator</h3>
+      <p class="home-card__desc">Compare current salary to a new offer, in any currency, including what unvested 401(k) money you'd leave behind.</p>
+      <span class="home-card__cta">Open the calculator →</span>
+    </a>
+    <a href="stories.html" class="home-card">
+      <span class="home-card__no">Exhibit B</span>
+      <h3 class="home-card__title">Dispatches</h3>
+      <p class="home-card__desc">Real entries from people who stayed and people who left, in their own words, filed next to the numbers.</p>
+      <span class="home-card__cta">Read the stories →</span>
+    </a>
+    <a href="about.html" class="home-card">
+      <span class="home-card__no">Exhibit D</span>
+      <h3 class="home-card__title">About The Ledger</h3>
+      <p class="home-card__desc">Why this exists, and what we mean by doing the math honestly.</p>
+      <span class="home-card__cta">Read more →</span>
+    </a>
+    <a href="contact.html" class="home-card">
+      <span class="home-card__no">Exhibit E</span>
+      <h3 class="home-card__title">Contact Us</h3>
+      <p class="home-card__desc">Questions, corrections, press, or just want to say hello.</p>
+      <span class="home-card__cta">Get in touch →</span>
+    </a>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__masthead">THE LEDGER</p>
+    <p class="footer__line">Printed for the undecided, by the once-undecided.</p>
+    <p class="footer__meta">No data sold. No names required. Entries are anonymized estimates, not financial advice.</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="stories.html">Stories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

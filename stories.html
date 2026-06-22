@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stories — The Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== MASTHEAD ===================== -->
+  <header class="masthead">
+    <div class="masthead__top">
+      <span class="masthead__date" id="todayDate">—</span>
+      <div class="masthead__topright">
+        <label for="currencySelect" class="currency-label">Currency</label>
+        <select id="currencySelect" class="currency-select">
+          <option value="USD">$ USD</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+          <option value="INR">₹ INR</option>
+          <option value="CAD">$ CAD</option>
+          <option value="AUD">$ AUD</option>
+          <option value="JPY">¥ JPY</option>
+        </select>
+      </div>
+    </div>
+    <div class="masthead__main">
+      <a href="index.html" class="masthead__titlelink"><h1 class="masthead__title">THE LEDGER</h1></a>
+      <p class="masthead__subtitle">A public record of who stayed, who left, and what it cost them</p>
+    </div>
+    <nav class="masthead__nav">
+      <a href="index.html">Home</a>
+      <span class="dot">·</span>
+      <a href="calculator.html">Calculator</a>
+      <span class="dot">·</span>
+      <a href="stories.html" class="is-active">Stories</a>
+      <span class="dot">·</span>
+      <a href="about.html">About Us</a>
+      <span class="dot">·</span>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ===================== PAGE INTRO ===================== -->
+  <section class="page-intro">
+    <p class="page-intro__eyebrow">Exhibit B</p>
+    <h2 class="page-intro__title">Dispatches From the Undecided</h2>
+    <p class="page-intro__desc">Real entries from the record. Filter by verdict, or add your own below.</p>
+  </section>
+
+  <!-- ===================== STORIES FEED ===================== -->
+  <section class="dispatches">
+    <div class="dispatches__filter">
+      <button class="filter-btn is-active" data-filter="all">All entries</button>
+      <button class="filter-btn" data-filter="stay">Stayed</button>
+      <button class="filter-btn" data-filter="leave">Left</button>
+    </div>
+
+    <div class="dispatches__grid" id="storiesGrid">
+      <!-- populated by JS -->
+    </div>
+  </section>
+
+  <!-- ===================== SUBMIT FORM ===================== -->
+  <section class="submit" id="submit">
+    <div class="section-head section-head--invert">
+      <span class="section-head__no">Exhibit C</span>
+      <h3 class="section-head__title">Add Your Storey</h3>
+      <p class="section-head__desc">Your story joins the public record. No company names required.</p>
+    </div>
+
+    <form class="submit__form" id="storyForm">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="storyName">Your name <span class="optional">(or initials)</span></label>
+          <input type="text" id="storyName" placeholder="A. R." required>
+        </div>
+        <div class="form-field">
+          <label for="storyRole">Role / field</label>
+          <input type="text" id="storyRole" placeholder="Software Engineer" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="storyVerdict">Your verdict</label>
+          <select id="storyVerdict" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="stay">I stayed</option>
+            <option value="leave">I left</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="storySalaryChange">Salary change</label>
+          <input type="text" id="storySalaryChange" placeholder="+18% or -$3,000" required>
+        </div>
+      </div>
+
+      <div class="form-field form-field--full">
+        <label for="storyText">Tell it straight</label>
+        <textarea id="storyText" rows="5" placeholder="What made you decide? What would you tell someone facing the same choice today?" required></textarea>
+      </div>
+
+      <button type="submit" class="submit__btn">File this entry</button>
+      <p class="submit__confirm" id="submitConfirm" hidden>Filed. Thank you for adding to the record.</p>
+    </form>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__masthead">THE LEDGER</p>
+    <p class="footer__line">Printed for the undecided, by the once-undecided.</p>
+    <p class="footer__meta">No data sold. No names required. Entries are anonymized estimates, not financial advice.</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="stories.html">Stories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

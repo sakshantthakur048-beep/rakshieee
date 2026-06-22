@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — The Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== MASTHEAD ===================== -->
+  <header class="masthead">
+    <div class="masthead__top">
+      <span class="masthead__date" id="todayDate">—</span>
+      <div class="masthead__topright">
+        <label for="currencySelect" class="currency-label">Currency</label>
+        <select id="currencySelect" class="currency-select">
+          <option value="USD">$ USD</option>
+          <option value="EUR">€ EUR</option>
+          <option value="GBP">£ GBP</option>
+          <option value="INR">₹ INR</option>
+          <option value="CAD">$ CAD</option>
+          <option value="AUD">$ AUD</option>
+          <option value="JPY">¥ JPY</option>
+        </select>
+      </div>
+    </div>
+    <div class="masthead__main">
+      <a href="index.html" class="masthead__titlelink"><h1 class="masthead__title">THE LEDGER</h1></a>
+      <p class="masthead__subtitle">A public record of who stayed, who left, and what it cost them</p>
+    </div>
+    <nav class="masthead__nav">
+      <a href="index.html">Home</a>
+      <span class="dot">·</span>
+      <a href="calculator.html">Calculator</a>
+      <span class="dot">·</span>
+      <a href="stories.html">Stories</a>
+      <span class="dot">·</span>
+      <a href="about.html">About Us</a>
+      <span class="dot">·</span>
+      <a href="contact.html" class="is-active">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ===================== CONTACT US ===================== -->
+  <section class="contact">
+    <div class="section-head section-head--invert">
+      <span class="section-head__no">Exhibit E</span>
+      <h3 class="section-head__title">Contact Us</h3>
+      <p class="section-head__desc">Questions, corrections, press, or just want to say hello.</p>
+    </div>
+
+    <form class="contact__form" id="contactForm">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="contactName">Your name</label>
+          <input type="text" id="contactName" placeholder="Jordan Lee" required>
+        </div>
+        <div class="form-field">
+          <label for="contactEmail">Your email</label>
+          <input type="email" id="contactEmail" placeholder="jordan@email.com" required>
+        </div>
+      </div>
+
+      <div class="form-field form-field--full">
+        <label for="contactSubject">Subject</label>
+        <select id="contactSubject">
+          <option value="General question">General question</option>
+          <option value="Correction request">Correction request</option>
+          <option value="Press inquiry">Press inquiry</option>
+          <option value="Partnership">Partnership</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-field form-field--full">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" rows="5" placeholder="Write your message here." required></textarea>
+      </div>
+
+      <button type="submit" class="submit__btn">Send message</button>
+      <p class="submit__confirm" id="contactConfirm" hidden>Your email app should now be open with this message ready to send.</p>
+    </form>
+
+    <div class="contact__direct">
+      <p>Prefer email directly? Write to <a href="mailto:hello@theledger.example">hello@theledger.example</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__masthead">THE LEDGER</p>
+    <p class="footer__line">Printed for the undecided, by the once-undecided.</p>
+    <p class="footer__meta">No data sold. No names required. Entries are anonymized estimates, not financial advice.</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="stories.html">Stories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
